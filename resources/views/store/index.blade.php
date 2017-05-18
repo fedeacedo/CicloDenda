@@ -1,21 +1,27 @@
 @extends('store.template')
+
 @section('content')
 
-	<div class="products">
+@include('store.partials.slider')
+
+<div class="container text-center">
+	<div id="products">
 		@foreach($products as $product)
-			<div class="product">
+			<div class="product white-panel">
 				<h3>{{ $product->name }}</h3><hr>
 				<img src="{{ $product->image }}" width="200">
-				<div class="product-info">
+				<div class="product-info panel">
 					<p>{{ $product->extract }}</p>
-					<p>Precio: {{ number_format($product->price,2) }} €</p>
-					<p> 
-						<a href="#">Comprar</a>
-						<a href="{{ route('product-detail', $product->slug) }}">Leer más</a> 
+					<h3><span class="label label-success">Precio: {{ number_format($product->price,2) }} €</span></h3>
+					<p>
+						<a class="btn btn-warning" {{-- href="{{ route('cart-add', $product->slug) }}"> --}}
+							<i class="fa fa-cart-plus"></i> Comprar
+						</a>
+						<a class="btn btn-primary" href="{{ route('product-detail', $product->slug) }}"><i class="fa fa-chevron-circle-right"></i> Leer mas</a>
 					</p>
 				</div>
 			</div>
 		@endforeach
 	</div>
-
+</div>
 @stop

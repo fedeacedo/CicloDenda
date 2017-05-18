@@ -11,14 +11,14 @@
       {{-- <nav class="navbar navbar-default">
         <div class="container-fluid">
           <div class="navbar-header">
-            <a class="navbar-brand" href="#">
-              <img alt="Brand" src="...">
+            <a class="navbar-brand" href="/">
+              <img alt="Brand" src="http://i890.photobucket.com/albums/ac102/fdkar/Avatares/ZHM.gif" alt="" class="avatar"">
             </a>
           </div>
         </div>
       </nav> --}}
 
-      <a class="navbar-brand main-title" href="{{-- {{ route('home') }} --}}">Ciclo Denda</a>
+      <a class="navbar-brand main-title" href="{{ route('home') }}">Ciclo Denda</a>
     </div>
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
